@@ -198,9 +198,6 @@
                  <div class="date">23 mar. 2024</div>
               </div>
               <div class="images">
-<!--                  <img src="images/1.png" alt="Review Image 2">
-                 <img src="images/2.png" alt="Review Image 2">
-                 <img src="images/3.png" alt="Review Image 2"> -->
               </div>
               <p>Chegou no mesmo dia recomendo funciona perfeitamente .
                Obrigado aos vendedores. 
@@ -214,18 +211,110 @@
                  </button>
               </div>
            </div>
+           <div class="comment">
+            <div class="header">
+               <div class="stars">
+                  <span class="material-symbols-outlined stars">star</span>
+                  <span class="material-symbols-outlined stars">star</span>
+                  <span class="material-symbols-outlined stars">star</span>
+                  <span class="material-symbols-outlined stars">star</span>
+                  <span class="material-symbols-outlined stars">star</span>
+               </div>
+               <div class="date">23 mar. 2024</div>
+            </div>
+            <div class="images">
+               <img src="images/pistolarosa1.png" alt="Review Image 2" alt="Review Image 2" onclick="openModal(this.src)">
+            </div>
+            <p>Krlo que arminha Top, comprei pra dar de presente, já testei e tudo funcionando certinho.
+               Comprem sem medo, postagem e entrega super rápida.</p>
+            <div class="actions">
+               <button class="like-button" onclick="toggleLike(this)">
+               <span class="material-symbols-outlined" style="color: black">thumb_up</span> É útil <span class="count">21</span>
+               </button>
+               <button class="dislike-button" onclick="toggleDislike(this)">
+               <span class="material-symbols-outlined" style="color: black">thumb_down</span>
+               </button>
+            </div>
+         </div>
+           
         </div>
         <div class="divisoria"></div>
         <p style="margin-left: 3%; margin-right: 3%; font-family: 'GellixRegular'; font-size: 14px; padding-top: 5px;"><span style="font-family: 'GellixSemiBold';">Termos e condições. Como cuidamos da sua privacidade. Acessibilidade Informações sobre seguros Blog Afiliados Tendências</span><br><br>© 1999-2024 Ebazar.com.br LTDA.CNPJ n.º 03.007.331/0001-41 / Av. das Nações Unidas, nº 3.003, Bonfim, Osasco/SP - CEP 06233-903 - empresa do grupo Mercado Livre.<span style="font-family: 'GellixSemiBold';"><br><br>Brasil/Português</span></p>
-        <script src="responda.html"></script>
-        <script>
-           document.querySelectorAll('.thumbnails img').forEach(image => {
-               image.addEventListener('click', function() {
-                   document.querySelector('.main-image').src = this.src;
-               });
-           });
-           document.getElementById("tv").addEventListener("click", timeTv);
-        </script>
+        <div id="imageModal" class="modal hidden">
+         <span class="close" onclick="closeModal()">&times;</span>
+         <img class="modal-content" id="modalImage">
+         <div id="caption"></div>
+        </div>
+ 
+     <script>
+         document.querySelectorAll('.thumbnails img').forEach(image => {
+             image.addEventListener('click', function() {
+                 document.querySelector('.main-image').src = this.src;
+             });
+         });
+ 
+         function openModal(src) {
+             document.getElementById('modalImage').src = src;
+             document.getElementById('imageModal').classList.remove('hidden');
+         }
+ 
+         function closeModal() {
+             document.getElementById('imageModal').classList.add('hidden');
+         }
+ 
+         document.getElementById("tv").addEventListener("click", timeTv);
+ 
+         function toggleLike(button) {
+             const count = button.querySelector('.count');
+             count.textContent = parseInt(count.textContent) + 1;
+         }
+ 
+         function toggleDislike(button) {
+             // Add logic if needed
+         }
+     </script>
+ 
+     <style>
+         .modal {
+             display: flex;
+             position: fixed;
+             z-index: 1;
+             left: 0;
+             top: 0;
+             width: 100%;
+             height: 100%;
+             overflow: auto;
+             background-color: rgb(0,0,0);
+             background-color: rgba(0,0,0,0.9);
+         }
+ 
+         .modal-content {
+             margin: auto;
+             display: block;
+             width: 80%;
+             max-width: 700px;
+         }
+ 
+         .close {
+             position: absolute;
+             top: 15px;
+             right: 35px;
+             color: #f1f1f1;
+             font-size: 40px;
+             font-weight: bold;
+         }
+ 
+         .close:hover,
+         .close:focus {
+             color: #bbb;
+             text-decoration: none;
+             cursor: pointer;
+         }
+ 
+         .hidden {
+             display: none;
+         }
+     </style>
      
   
   
