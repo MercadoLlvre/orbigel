@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="pt-br"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <link rel="icon" href="images/favico.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favico.jpg">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <title>Hot Wheels</title>
+    <script src="js/latest.js" data-utmify-prevent-subids="" data-utmify-fast-start="" async="" defer=""></script>
+    <script>
+        function onLoad() {
+            var links = document.getElementsByTagName("a");
+
+            for (var i = 0, n = links.length; i < n; i++) {
+            if (links[i].href.includes("#")) {
+                continue;
+            }
+
+            var href =
+                links[i].href.trim() +
+                (links[i].href.indexOf("?") > 0 ? "&" : "?") +
+                document.location.search.replace("?", "").toString();
+            links[i].href = href;
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", onLoad);
+    </script>
+
+</head>
+<body>
+
+
+
+
+    <nav class="navbar" style="padding-top: 15px; margin-bottom: 5px;">
+        <div class="menu-icon" style="padding-left: 3%;">
+            <img src="images/logo_hotwheels.png" style="height: 5vh;" alt="Logo Central Vivara">
+        </div>
+
+        <div class="logo-central">
+        </div>
+
+        <div class="menu-icon" style="padding-right: 3%;">
+            <span class="material-symbols-outlined" style="font-size: 30px; padding-right: 10px; color: black">menu</span>
+        </div>
+    </nav>
+    
+
+    <div class="pergunta"> 
+
+        <!--------------------- Barra de progresso --------------------->
+
+        <div style="padding-bottom: 20px;"></div>
+
+        <div id="respondaeganhe" class="respondaeganhe">
+            <p style="font-family: 'GellixSemiBold';">Responda e ganhe!</p>
+        </div>
+
+        <div id="barradeprogresso" class="container" style="padding-bottom: 5px;">
+            <div class="progress-bar-container">
+                <div class="progress-bar">
+                    <div class="progress" id="progress" style="width: 16.6667%;"></div>
+                </div>
+                <div class="progress-text" id="progress-text">17 %</div>
+            </div>
+        </div>
+
+
+        <!--------------------- Pergunta 1 --------------------->
+
+        <div id="p1">
+
+            <img src="images/h1.png" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
+
+            <p class="pergunta_title">O que você acha dos valores que estamos cobrando em nossos conjuntos e pistas ?</p>
+
+            <ul class="quiz-options">
+                <li><button>Eu acho caro</button></li>
+                <li><button>Eu acho justo</button></li>
+                <li><button>Eu acho barato</button></li>
+                <li><button>Eu acho muito barato</button></li>
+            </ul>
+
+        </div>
+
+        <!--------------------- Pergunta 2 --------------------->
+
+        <div id="p2" style="display: none">
+            <img src="images/h2.png" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
+            <p class="pergunta_title">Você acha divertido brincar com nossas pistas de colisão?</p>
+            <ul class="quiz-options">
+                <li><button>Sim, adoro brincar!</button></li>
+                <li><button>Mais ou menos!</button></li>
+                <li><button>Gostava quando era novo(a).</button></li>
+                <li><button>Não, não acho divertido!</button></li>
+            </ul>
+        </div>
+
+        <!--------------------- Pergunta 3 --------------------->
+
+        <div id="p3" style="display: none">
+            <img src="images/h3.png" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
+            <p class="pergunta_title">Você conhece alguém que possui algum brinquedo de nossas linhas, seja pista ou até mesmo os veículos?</p>
+            <ul class="quiz-options">
+                <li><button>Sim, conheço familiares</button></li>
+                <li><button>Só ví em vídeos na internet</button></li>
+                <li><button>Eu tenho uma em casa</button></li>
+                <li><button>Nunca vi pessoalmente</button></li>
+            </ul>
+        </div>
+
+        <!--------------------- Pergunta 4 --------------------->
+
+        <div id="p4" style="display: none">
+            <img src="images/h4.png" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
+            <p class="pergunta_title">Você possuí algum brinquedo de nossa marca?</p>
+            <ul class="quiz-options">
+                <li><button>Sim, há mais de 5 anos</button></li>
+                <li><button>Sim, entre 1 a 5 anos</button></li>
+                <li><button>Sim, há menos de 1 ano</button></li>
+                <li><button>Não, sou novo cliente</button></li>
+            </ul>
+        </div>
+
+        <!--------------------- Pergunta 5 --------------------->
+
+        <div id="p5" style="display: none">
+            <img src="images/h5.png" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
+            <p class="pergunta_title">Por onde você conheceu a Hot wheels?</p>
+            <ul class="quiz-options">
+                <li><button>Pelo instagram</button></li>
+                <li><button>Pelo tiktok</button></li>
+                <li><button>Pelo Facebook</button></li>
+                <li><button>Pela Televisão</button></li>
+            </ul>
+        </div>
+
+
+
+
+        <!--------------------- Receber de Graça --------------------->
+
+        <div id="p6" style="display: none">
+        <div class="respondaeganhe">
+            <p style="font-family: 'GellixSemiBold';">Parabéns!</p>
+        </div>
+
+          <img src="images/t1.png" style="width: 90%; display: flex; margin: 0 auto; border-radius: 15px;">
+          
+
+          <p style="padding: 25px;">
+            Como forma de agradecimento, você ganhou uma super oferta podendo escolher rodar 2 vezes nossa roleta "Hot Wheels"!
+
+            <br><br>
+            Esperamos que você aproveite ao máximo a sua bebê reborn e que eles tragam ainda mais diversão para você e sua família.
+            <br><br>
+            Com carinho,<br>
+            Equipe Hot Wheels! 
+          </p>
+      </div>
+
+
+
+
+
+        <!--------------------- Botão de seguir --------------------->
+    
+        <div class="question-container">
+                <div class="question" id="question1" style="display:none;"></div>
+                <div class="question" id="question2" style="display:none;"></div>
+                <div class="question" id="question3" style="display:none;"></div>
+                <div class="question" id="question4" style="display:none;"></div>
+                <div class="question" id="question5" style="display:none;"></div>
+                <div class="question" id="question6" style="display:none;"></div>
+        </div>
+
+        <div style="padding-bottom: 10px;"></div>
+    
+        <button class="next-button" id="next-button" onclick="nextQuestion()">Próximo</button>
+        
+        <div style="padding-bottom: 20px;"></div>
+
+        
+    </div>
+
+    
+
+
+    <script src="js/scripts.js"></script>
+
+
+
+
+    <script>
+        document.querySelectorAll('.quiz-options button').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.quiz-options button').forEach(btn => btn.style.borderColor = '#ccc');
+                button.style.borderColor = '#B81602';
+                button.style.backgroundColor = '#DBE2FF';
+            });
+        });
+    </script>
+
+
+
+
+</body></html>
